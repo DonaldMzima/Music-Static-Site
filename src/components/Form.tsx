@@ -18,10 +18,6 @@ import {
 import { useState } from 'react'
 import ModelUI from './Model'
 
-export type myObjectTypes = {
-  onSubmit: any
-}
-
 const schema = Yup.object({
   name: Yup.string().required('enter your name'),
   surname: Yup.string().required('enter your surame'),
@@ -32,7 +28,7 @@ const schema = Yup.object({
 
 export const Form = () => {
   const [submitting, setSubmitting] = useState(false)
-  const [modal, setModal] = useState<any>(null)
+  const [modal, setModal] = useState<any>(true)
 
   const Submit = (event: any) => {
     event.preventDefault()
@@ -51,7 +47,7 @@ export const Form = () => {
       name: '',
       surname: '',
       email: '',
-      age: 15,
+      age: 6,
       password: '',
     },
     resolver: yupResolver(schema),
@@ -68,10 +64,12 @@ export const Form = () => {
   return (
     <>
       <div onSubmit={Submit}>
-        <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
+        <div>
+          <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
+        </div>
         <Stack divider={<StackDivider />}>
           <Text fontSize="5xl">
-            <h1>Music-Static-Site</h1>
+            <h1>Login</h1>
           </Text>
           {submitting && <div>Submtting Form...</div>}
           <form onSubmit={handleSubmit(onSubmit)}>
