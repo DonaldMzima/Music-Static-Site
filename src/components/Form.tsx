@@ -67,70 +67,77 @@ export const Form = () => {
         <div>
           <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
         </div>
-        <Stack divider={<StackDivider />}>
-          <Text fontSize="5xl">
-            <h1>Login</h1>
-          </Text>
-          {submitting && <div>Submtting Form...</div>}
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <fieldset>
-              <FormControl>
-                <Center>
-                  <FormLabel>
-                    <p>Name:</p>
-                    <Input
-                      type="text"
-                      placeholder="name..."
-                      {...register('name')}
-                    />
-                  </FormLabel>
-                  <p>{errors.name?.message}</p>
-                  <FormLabel>
-                    <p>Surname:</p>
-                    <Input
-                      type="text"
-                      placeholder="surname..."
-                      {...register('surname')}
-                    />
-                  </FormLabel>
-                  <p>{errors.surname?.message}</p>
-                  <FormLabel>
-                    <p>Email:</p>
-                    <Input
-                      type="text"
-                      placeholder="email..."
-                      {...register('email')}
-                    />
-                  </FormLabel>
-                  <p>{errors.email?.message}</p>
-                  <FormLabel>
-                    <p>Age:</p>
-                    <Input
-                      type="number"
-                      placeholder="age..."
-                      {...register('age')}
-                    />
-                  </FormLabel>
-                  <p>{errors.age?.message}</p>
-                  <FormLabel>
-                    <p>Password:</p>
-                    <Input
-                      type="text"
-                      placeholder="password..."
-                      {...register('password')}
-                    />
-                  </FormLabel>
-                  <p>{errors.age?.message}</p>
-                </Center>
-              </FormControl>
-            </fieldset>
-            <div>
-              <Button colorScheme="orange" type="submit">
-                Submit
-              </Button>
-            </div>
-          </form>
-        </Stack>
+
+        <Text fontSize="1xl">
+          <h1>Login</h1>
+        </Text>
+        {submitting && <div>Submtting Form...</div>}
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <fieldset>
+            <FormControl>
+              <Center>
+                <FormLabel>
+                  <p>Name:</p>
+                  <Input
+                    type="text"
+                    placeholder="name..."
+                    {...register('name')}
+                  />
+                </FormLabel>
+                <p>{errors.name?.message}</p>
+              </Center>
+              <Center>
+                <FormLabel>
+                  <p>Surname:</p>
+                  <Input
+                    type="text"
+                    placeholder="surname..."
+                    {...register('surname')}
+                  />
+                </FormLabel>
+                <p>{errors.surname?.message}</p>
+              </Center>
+              <Center>
+                <FormLabel>
+                  <p>Email:</p>
+                  <Input
+                    type="text"
+                    placeholder="email..."
+                    {...register('email')}
+                  />
+                </FormLabel>
+                <p>{errors.email?.message}</p>
+              </Center>
+              <Center>
+                <FormLabel>
+                  <p>Age:</p>
+                  <Input
+                    type="number"
+                    placeholder="age..."
+                    {...register('age')}
+                  />
+                </FormLabel>
+                <p>{errors.age?.message}</p>
+              </Center>
+              <Center>
+                <FormLabel>
+                  <p>Password:</p>
+                  <Input
+                    type="text"
+                    placeholder="password..."
+                    {...register('password')}
+                  />
+                </FormLabel>
+                <p>{errors.age?.message}</p>
+              </Center>
+            </FormControl>
+          </fieldset>
+          <div>
+            <Button colorScheme="orange" type="submit">
+              Submit
+            </Button>
+          </div>
+        </form>
       </div>
     </>
   )
