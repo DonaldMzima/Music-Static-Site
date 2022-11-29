@@ -6,12 +6,6 @@ import {
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -19,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
-const Links = ['Dashboard', 'Projects', 'Team']
+const Links = ['Home', 'Lyrics', 'Links']
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -65,28 +59,12 @@ export default function Simple() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}
-              >
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://www.billboard.com/wp-content/uploads/media/music-listening-illustration-2019-billboard-1548.jpg?w=1024'
-                  }
-                />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+            <Avatar
+              size={'sm'}
+              src={
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTky_3MPX9iUQMaRVDkCFdu-1842Xgw6EUmvw&usqp=CAUgit'
+              }
+            />
           </Flex>
         </Flex>
 
