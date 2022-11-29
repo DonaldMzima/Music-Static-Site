@@ -1,12 +1,16 @@
 import React from 'react'
-import { Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
+import Simple from '../bar'
 
 const NavBar = () => {
   return (
     <nav>
-      <Text as="cite" fontSize="2xl">
-        <h1>Music-Static-Site</h1>
-      </Text>
+      {/* <Box boxShadow="dark-lg" p="6" rounded="md" bg="white"> */}
+
+      <div>
+        <Simple />
+      </div>
+      {/* </Box> */}
     </nav>
   )
 }

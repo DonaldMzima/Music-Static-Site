@@ -9,8 +9,6 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Stack,
-  StackDivider,
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
@@ -83,9 +81,12 @@ export const Form = () => {
                     placeholder="name..."
                     {...register('name')}
                   />
+                  <Text color="red">
+                    <p>{errors.name?.message}</p>
+                  </Text>
                 </FormLabel>
-                <p>{errors.name?.message}</p>
               </Center>
+
               <Center>
                 <FormLabel>
                   <p>Surname:</p>
@@ -94,9 +95,12 @@ export const Form = () => {
                     placeholder="surname..."
                     {...register('surname')}
                   />
+                  <Text color="red">
+                    <p>{errors.surname?.message}</p>
+                  </Text>
                 </FormLabel>
-                <p>{errors.surname?.message}</p>
               </Center>
+
               <Center>
                 <FormLabel>
                   <p>Email:</p>
@@ -105,9 +109,12 @@ export const Form = () => {
                     placeholder="email..."
                     {...register('email')}
                   />
+                  <Text color="red">
+                    <p>{errors.email?.message}</p>
+                  </Text>
                 </FormLabel>
-                <p>{errors.email?.message}</p>
               </Center>
+
               <Center>
                 <FormLabel>
                   <p>Age:</p>
@@ -116,9 +123,12 @@ export const Form = () => {
                     placeholder="age..."
                     {...register('age')}
                   />
+                  <Text color="red">
+                    <p>{errors.age?.message}</p>
+                  </Text>
                 </FormLabel>
-                <p>{errors.age?.message}</p>
               </Center>
+
               <Center>
                 <FormLabel>
                   <p>Password:</p>
@@ -127,8 +137,10 @@ export const Form = () => {
                     placeholder="password..."
                     {...register('password')}
                   />
+                  <Text color="red">
+                    <p>{errors.age?.message}</p>
+                  </Text>
                 </FormLabel>
-                <p>{errors.age?.message}</p>
               </Center>
             </FormControl>
           </fieldset>
