@@ -63,10 +63,16 @@ const Footer = () => {
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
+            <SocialButton
+              label={'YouTube'}
+              href={'https://www.youtube.com/@mzimadablackout925'}
+            >
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
+            <SocialButton
+              label={'Instagram'}
+              href={'https://www.instagram.com/mzimadablackout/'}
+            >
               <FaInstagram />
             </SocialButton>
           </Stack>

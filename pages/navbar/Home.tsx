@@ -1,6 +1,6 @@
 import SvgComponent from '../../svgs/SVG'
 
-export default function Home() {
+export const Home = () => {
   return (
     <div>
       <SvgComponent />
