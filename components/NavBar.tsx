@@ -1,0 +1,110 @@
+import {
+  Avatar,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+} from '@chakra-ui/react'
+
+import React from 'react'
+
+import Link from 'next/link'
+import { Form } from './Form'
+import Footer from './footer/Footer'
+
+const NavBar = () => {
+  return (
+    <>
+      <Box bg="green.100">
+        <Flex h={16} alignItems={'center'}>
+          <Avatar
+            size={'md'}
+            src={
+              'https://www.creativefabrica.com/wp-content/uploads/2020/08/06/Music-Logo-Graphics-4868281-1-580x386.jpg'
+            }
+          />
+
+          <Heading size="md" as="em">
+            Music-Static-Site
+          </Heading>
+          <Container
+            as={Stack}
+            maxW={'6xl'}
+            py={4}
+            spacing={4}
+            justify={'center'}
+            align={'center'}
+          >
+            <Stack direction={'row'} spacing={6}>
+              <Link href="/Home">
+                <Button
+                  variant="ghost"
+                  as="a"
+                  aria-label="Home"
+                  my={5}
+                  w="100%"
+                >
+                  Home
+                </Button>
+              </Link>
+
+              <Link href="/About">
+                <Button
+                  variant="ghost"
+                  as="a"
+                  aria-label="About"
+                  my={5}
+                  w="100%"
+                >
+                  About
+                </Button>
+              </Link>
+
+              <Link href="/Lyrics">
+                <Button
+                  variant="ghost"
+                  as="a"
+                  aria-label="Lyrics"
+                  my={5}
+                  w="100%"
+                >
+                  Lyrics
+                </Button>
+              </Link>
+
+              <Link href="/Contact">
+                <Button
+                  variant="ghost"
+                  as="a"
+                  aria-label="Contact"
+                  my={5}
+                  w="100%"
+                >
+                  Contact
+                </Button>
+              </Link>
+            </Stack>
+          </Container>
+
+          {/* <li>
+            <Link href="/Home">
+              <Button variant="ghost" as="a" aria-label="Home" my={5} w="100%">
+                Home
+              </Button>
+            </Link>
+          </li> */}
+        </Flex>
+      </Box>
+      <div>
+        <Form />
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </>
+  )
+}
+
+export default NavBar
