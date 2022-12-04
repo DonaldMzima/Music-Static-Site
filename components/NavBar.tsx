@@ -5,6 +5,7 @@ import {
   Container,
   Flex,
   Heading,
+  Img,
   Stack,
 } from '@chakra-ui/react'
 
@@ -97,9 +98,12 @@ const NavBar = () => {
           </li> */}
         </Flex>
       </Box>
-      <div>
-        <Form />
-      </div>
+      <Img
+        src={
+          'https://i0.wp.com/americbuzz.com/wp-content/uploads/2021/09/600_upload_playlist_50960.webp?resize=484%2C484&ssl=1'
+        }
+      />
+
       <div>
         <Footer />
       </div>

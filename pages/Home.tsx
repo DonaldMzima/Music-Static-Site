@@ -1,4 +1,4 @@
-import SvgComponent from '../../svgs/SVG'
+import SvgComponent from '../svgs/SVG'
 
 export const Home = () => {
   return (
