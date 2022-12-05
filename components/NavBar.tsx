@@ -69,16 +69,18 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Button
-                onClick={() => route.push('/lyrics')}
-                variant="ghost"
-                as="a"
-                aria-label="Lyrics"
-                my={5}
-                w="100%"
-              >
-                Lyrics
-              </Button>
+              <Link href={''}>
+                <Button
+                  variant="ghost"
+                  as="a"
+                  aria-label="Lyrics"
+                  my={5}
+                  w="100%"
+                  onClick={() => route.push('/lyrics')}
+                >
+                  Lyrics
+                </Button>
+              </Link>
 
               <Link href="/contact">
                 <Button
@@ -94,13 +96,6 @@ const NavBar = () => {
             </Stack>
           </Container>
 
-          {/* <li>
-            <Link href="/Home">
-              <Button variant="ghost" as="a" aria-label="Home" my={5} w="100%">
-                Home
-              </Button>
-            </Link>
-          </li> */}
           <Box>
             <DarkMode />
           </Box>

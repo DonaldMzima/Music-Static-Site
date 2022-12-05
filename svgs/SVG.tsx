@@ -5,8 +5,8 @@ const SvgComponent = (props: any) => (
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={206}
-    height={106}
+    width={450}
+    height={550}
     viewBox="0 0 471.76 582.83"
     className="illustration styles_illustrationTablet__1DWOa"
     {...props}
