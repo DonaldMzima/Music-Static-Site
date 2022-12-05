@@ -14,6 +14,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Form } from './Form'
 import Footer from './footer/Footer'
+import { Example } from './DarkMode'
 
 const NavBar = () => {
   return (
@@ -96,6 +97,9 @@ const NavBar = () => {
               </Button>
             </Link>
           </li> */}
+          <Box>
+            <Example />
+          </Box>
         </Flex>
       </Box>
       <Img
