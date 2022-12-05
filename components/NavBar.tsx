@@ -7,6 +7,7 @@ import {
   Heading,
   Img,
   Stack,
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 import React from 'react'
@@ -14,12 +15,14 @@ import React from 'react'
 import Link from 'next/link'
 import { Form } from './Form'
 import Footer from './footer/Footer'
-import { Example } from './DarkMode'
+import { DarkMode } from './DarkMode'
 
 const NavBar = () => {
+  // const value = useColorModeValue(gray.100, green.100)
+
   return (
     <>
-      <Box bg="green.100">
+      <Box bg="gray.100">
         <Flex h={16} alignItems={'center'}>
           <Avatar
             size={'md'}
@@ -98,7 +101,7 @@ const NavBar = () => {
             </Link>
           </li> */}
           <Box>
-            <Example />
+            <DarkMode />
           </Box>
         </Flex>
       </Box>
