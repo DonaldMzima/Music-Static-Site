@@ -1,10 +1,14 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
 import SvgComponent from '../svgs/SVG'
 
-export const About = () => {
+const About = () => {
   return (
     <div>
+      <NavBar />
       <SvgComponent />
     </div>
   )
 }
+
+export default About

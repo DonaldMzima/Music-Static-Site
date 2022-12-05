@@ -4,6 +4,7 @@ import {
   Container,
   Stack,
   Text,
+  useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
@@ -19,9 +20,11 @@ const Footer = () => {
     label: string
     href: string
   }) => {
+    const colorMode = useColorModeValue('green.100', 'whiteAlpha.100')
+    const hover = useColorModeValue('whiteAlpha.80', 'gray.100')
     return (
       <chakra.button
-        bg={'whiteAlpha.100'}
+        bg={colorMode}
         rounded={'full'}
         w={8}
         h={8}
@@ -33,7 +36,7 @@ const Footer = () => {
         justifyContent={'center'}
         transition={'background 0.3s ease'}
         _hover={{
-          bg: 'whiteAlpha.200',
+          bg: hover,
         }}
       >
         <VisuallyHidden>{label}</VisuallyHidden>
@@ -47,7 +50,7 @@ const Footer = () => {
         borderTopWidth={1}
         borderStyle={'solid'}
         borderColor={'gray.700'}
-        bg={'gray.700'}
+        bg={useColorModeValue('green.100', 'whiteAlpha.100')}
       >
         <Container
           as={Stack}
