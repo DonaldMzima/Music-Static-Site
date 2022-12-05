@@ -16,13 +16,15 @@ import Link from 'next/link'
 import { Form } from './Form'
 import Footer from './footer/Footer'
 import { DarkMode } from './DarkMode'
+import { useRouter } from 'next/router'
 
 const NavBar = () => {
-  // const value = useColorModeValue(gray.100, green.100)
+  const route = useRouter()
+  const value = useColorModeValue('green.100', 'whiteAlpha.100')
 
   return (
     <>
-      <Box bg="gray.100">
+      <Box bg={value}>
         <Flex h={16} alignItems={'center'}>
           <Avatar
             size={'md'}
@@ -43,7 +45,7 @@ const NavBar = () => {
             align={'center'}
           >
             <Stack direction={'row'} spacing={6}>
-              <Link href="/Home">
+              <Link href="/">
                 <Button
                   variant="ghost"
                   as="a"
@@ -55,7 +57,7 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Link href="/About">
+              <Link href="/about">
                 <Button
                   variant="ghost"
                   as="a"
@@ -67,19 +69,18 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Link href="/Lyrics">
-                <Button
-                  variant="ghost"
-                  as="a"
-                  aria-label="Lyrics"
-                  my={5}
-                  w="100%"
-                >
-                  Lyrics
-                </Button>
-              </Link>
+              <Button
+                onClick={() => route.push('/lyrics')}
+                variant="ghost"
+                as="a"
+                aria-label="Lyrics"
+                my={5}
+                w="100%"
+              >
+                Lyrics
+              </Button>
 
-              <Link href="/Contact">
+              <Link href="/contact">
                 <Button
                   variant="ghost"
                   as="a"
@@ -105,15 +106,6 @@ const NavBar = () => {
           </Box>
         </Flex>
       </Box>
-      <Img
-        src={
-          'https://i0.wp.com/americbuzz.com/wp-content/uploads/2021/09/600_upload_playlist_50960.webp?resize=484%2C484&ssl=1'
-        }
-      />
-
-      <div>
-        <Footer />
-      </div>
     </>
   )
 }
