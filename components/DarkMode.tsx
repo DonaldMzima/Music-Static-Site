@@ -1,7 +1,7 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Button, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Button, useColorMode } from '@chakra-ui/react'
 
-export const DarkMode=()=> {
+export const DarkMode = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <header onSubmit={DarkMode}>
