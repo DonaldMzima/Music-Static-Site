@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import emailjs from '@emailjs/browser'
 
 import * as Yup from 'yup'
 
@@ -12,7 +13,6 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
-import emailjs from '@emailjs/browser'
 
 import { useState } from 'react'
 import ModelUI from './Model'
@@ -57,12 +57,21 @@ export const Form = () => {
     onOpen()
     setModal(data)
     console.log(data)
-    emailjs.sendForm(
-      'service_g0r22e7',
-      'template_f4lycfn',
-      data.target,
-      'user_f7IN71nkxx7QJ1xxpRjgZ',
-    )
+    emailjs
+      .sendForm(
+        'service_9l68yag',
+        'template_bmfoy27',
+        data.target,
+        'user_wcEzEMeePpQMJBII6',
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+        },
+      )
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
