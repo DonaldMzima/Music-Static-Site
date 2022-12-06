@@ -16,6 +16,7 @@ import {
 
 import { useState } from 'react'
 import ModelUI from './Model'
+import { toast } from 'react-toastify'
 
 const schema = Yup.object({
   name: Yup.string().required('enter your name'),
@@ -70,8 +71,15 @@ export const Form = () => {
         },
         (error) => {
           console.log(error.text)
+          toast.error('Message Not Send :-(', {
+            position: toast.POSITION.TOP_RIGHT,
+          })
         },
       )
+
+    toast.success('Message Send :-)', {
+      position: toast.POSITION.TOP_RIGHT,
+    })
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
