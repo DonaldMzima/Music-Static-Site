@@ -12,6 +12,7 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
+import emailjs from '@emailjs/browser'
 
 import { useState } from 'react'
 import ModelUI from './Model'
@@ -36,6 +37,7 @@ export const Form = () => {
       setSubmitting(false)
     }, 1750)
   }
+
   const {
     register,
     handleSubmit,
@@ -55,6 +57,12 @@ export const Form = () => {
     onOpen()
     setModal(data)
     console.log(data)
+    emailjs.sendForm(
+      'service_g0r22e7',
+      'template_f4lycfn',
+      data.target,
+      'user_f7IN71nkxx7QJ1xxpRjgZ',
+    )
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
