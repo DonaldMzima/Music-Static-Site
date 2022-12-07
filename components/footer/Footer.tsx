@@ -8,7 +8,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {
   const SocialButton = ({
@@ -63,8 +63,11 @@ const Footer = () => {
         >
           <Text>©Copywrite 2022 . All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton
+              label={'Linkedin'}
+              href={'www.linkedin.com/in/tshidiso-donald-mzima-8557a3231'}
+            >
+              <FaLinkedin />
             </SocialButton>
             <SocialButton
               label={'YouTube'}
