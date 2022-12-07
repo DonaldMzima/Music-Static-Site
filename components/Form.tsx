@@ -33,6 +33,30 @@ export const Form = () => {
   const Submit = (event: any) => {
     event.preventDefault()
     setSubmitting(true)
+    emailjs
+
+      .sendForm(
+        'service_9l68yag',
+        'template_bmfoy27',
+
+        event.target,
+        'wcEzEMeePpQMJBII6',
+      )
+      .then(
+        (result) => {
+          console.log(result.text)
+        },
+        (error) => {
+          console.log(error.text)
+          toast.error('Message Not Send :-(', {
+            position: toast.POSITION.TOP_RIGHT,
+          })
+        },
+      )
+
+    toast.success('Message Send :-)', {
+      position: toast.POSITION.TOP_RIGHT,
+    })
 
     setTimeout(() => {
       setSubmitting(false)
@@ -58,28 +82,6 @@ export const Form = () => {
     onOpen()
     setModal(data)
     console.log(data)
-    emailjs
-      .sendForm(
-        'service_9l68yag',
-        'template_bmfoy27',
-        data.target,
-        'user_wcEzEMeePpQMJBII6',
-      )
-      .then(
-        (result) => {
-          console.log(result.text)
-        },
-        (error) => {
-          console.log(error.text)
-          toast.error('Message Not Send :-(', {
-            position: toast.POSITION.TOP_RIGHT,
-          })
-        },
-      )
-
-    toast.success('Message Send :-)', {
-      position: toast.POSITION.TOP_RIGHT,
-    })
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -90,11 +92,12 @@ export const Form = () => {
         <div>
           <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
         </div>
-
-        <Text fontSize="1xl">
-          <h1>Login</h1>
-        </Text>
-        {submitting && <div>Submtting Form...</div>}
+        <Center>
+          <Text fontSize="1xl">
+            <h1>Login</h1>
+          </Text>
+        </Center>
+        <Center>{submitting && <div>Submtting Form...</div>}</Center>
         <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
             <FormControl>
@@ -170,9 +173,11 @@ export const Form = () => {
             </FormControl>
           </fieldset>
           <div>
-            <Button colorScheme="orange" type="submit">
-              Submit
-            </Button>
+            <Center>
+              <Button colorScheme="orange" type="submit">
+                Submit
+              </Button>
+            </Center>
           </div>
         </form>
       </div>
