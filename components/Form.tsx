@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser'
 import * as Yup from 'yup'
 
 import {
+  Box,
   Button,
   Center,
   FormControl,
@@ -101,75 +102,77 @@ export const Form = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <fieldset>
             <FormControl>
-              <Center>
-                <FormLabel>
-                  <p>Name:</p>
-                  <Input
-                    type="text"
-                    placeholder="name..."
-                    {...register('name')}
-                  />
-                  <Text color="red">
-                    <p>{errors.name?.message}</p>
-                  </Text>
-                </FormLabel>
-              </Center>
+              <Box border="1px" borderColor="gray.200">
+                <Center>
+                  <FormLabel>
+                    <p>Name:</p>
+                    <Input
+                      type="text"
+                      placeholder="name..."
+                      {...register('name')}
+                    />
+                    <Text color="red">
+                      <p>{errors.name?.message}</p>
+                    </Text>
+                  </FormLabel>
+                </Center>
 
-              <Center>
-                <FormLabel>
-                  <p>Surname:</p>
-                  <Input
-                    type="text"
-                    placeholder="surname..."
-                    {...register('surname')}
-                  />
-                  <Text color="red">
-                    <p>{errors.surname?.message}</p>
-                  </Text>
-                </FormLabel>
-              </Center>
+                <Center>
+                  <FormLabel>
+                    <p>Surname:</p>
+                    <Input
+                      type="text"
+                      placeholder="surname..."
+                      {...register('surname')}
+                    />
+                    <Text color="red">
+                      <p>{errors.surname?.message}</p>
+                    </Text>
+                  </FormLabel>
+                </Center>
 
-              <Center>
-                <FormLabel>
-                  <p>Email:</p>
-                  <Input
-                    type="text"
-                    placeholder="email..."
-                    {...register('email')}
-                  />
-                  <Text color="red">
-                    <p>{errors.email?.message}</p>
-                  </Text>
-                </FormLabel>
-              </Center>
+                <Center>
+                  <FormLabel>
+                    <p>Email:</p>
+                    <Input
+                      type="text"
+                      placeholder="email..."
+                      {...register('email')}
+                    />
+                    <Text color="red">
+                      <p>{errors.email?.message}</p>
+                    </Text>
+                  </FormLabel>
+                </Center>
 
-              <Center>
-                <FormLabel>
-                  <p>Age:</p>
-                  <Input
-                    type="number"
-                    placeholder="age..."
-                    {...register('age')}
-                  />
-                  <Text color="red">
-                    <p>{errors.age?.message}</p>
-                  </Text>
-                </FormLabel>
-              </Center>
+                <Center>
+                  <FormLabel>
+                    <p>Age:</p>
+                    <Input
+                      type="number"
+                      placeholder="age..."
+                      {...register('age')}
+                    />
+                    <Text color="red">
+                      <p>{errors.age?.message}</p>
+                    </Text>
+                  </FormLabel>
+                </Center>
 
-              <Center>
-                <FormLabel>
-                  <p>Password:</p>
-                  <Input
-                    type="text"
-                    placeholder="password..."
-                    {...register('password')}
-                  />
-                  <Text color="red">
-                    <p>{errors.age?.message}</p>
-                  </Text>
-                </FormLabel>
-              </Center>
+                <Center>
+                  <FormLabel>
+                    <p>Password:</p>
+                    <Input
+                      type="text"
+                      placeholder="password..."
+                      {...register('password')}
+                    />
+                    <Text color="red">
+                      <p>{errors.age?.message}</p>
+                    </Text>
+                  </FormLabel>
+                </Center>
+              </Box>
             </FormControl>
           </fieldset>
           <div>
