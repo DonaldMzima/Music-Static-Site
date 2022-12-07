@@ -1,4 +1,4 @@
-import { Img } from '@chakra-ui/react'
+import { Box, Img } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/footer/Footer'
@@ -11,9 +11,12 @@ export default function Home() {
     <>
       <div>
         <NavBar />
+
         <Img
+          boxSize="750px"
+          objectFit="cover"
           src={
-            'https://i0.wp.com/americbuzz.com/wp-content/uploads/2021/09/600_upload_playlist_50960.webp?resize=484%2C484&ssl=1'
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrPo9lVrXxqAnarF0j67287aVJtmO8oMc6Iw&usqp=CAU'
           }
         />
 
