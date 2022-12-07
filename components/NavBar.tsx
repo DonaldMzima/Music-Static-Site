@@ -20,7 +20,7 @@ import { useRouter } from 'next/router'
 
 const NavBar = () => {
   const route = useRouter()
-  const value = useColorModeValue('green.100', 'whiteAlpha.100')
+  const value = useColorModeValue('orange.400', 'whiteAlpha.100')
 
   return (
     <>
