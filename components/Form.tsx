@@ -47,7 +47,7 @@ const schema = Yup.object({
 export const Form = () => {
   const [submitting, setSubmitting] = useState(false)
   const [modal, setModal] = useState<any>(true)
-  const color = useColorModeValue('#B1B9D8', '#1A2036')
+  const color = useColorModeValue('orange.400', '#1A2036')
 
   const Submit = (event: any) => {
     event.preventDefault()
@@ -112,16 +112,10 @@ export const Form = () => {
           <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
         </div>
 
-        <Container
-          bg="#9DC4FB"
-          maxW="full"
-          mt={0}
-          centerContent
-          overflow="hidden"
-        >
+        <Container maxW="full" mt={0} centerContent overflow="hidden">
           <Flex>
             <Box
-              bg="#02054B"
+              bg={color}
               color="white"
               borderRadius="lg"
               m={{ sm: 4, md: 16, lg: 10 }}
@@ -146,7 +140,7 @@ export const Form = () => {
                             _hover={{ border: '2px solid #1C6FEB' }}
                             leftIcon={<MdPhone color="#1970F1" size="20px" />}
                           >
-                            +91-988888888
+                            +27-789941731
                           </Button>
                           <Button
                             size="md"
@@ -170,7 +164,7 @@ export const Form = () => {
                               <MdLocationOn color="#1970F1" size="20px" />
                             }
                           >
-                            Karnavati, India
+                            Vanderbijlpark, South Africa
                           </Button>
                         </VStack>
                       </Box>
@@ -209,7 +203,7 @@ export const Form = () => {
                   </WrapItem>
 
                   <WrapItem>
-                    <Box bg={color} borderRadius="lg">
+                    <Box bg="#F5F5F5" borderRadius="lg">
                       <Box m={8} color="#0B0E3F">
                         <VStack spacing={5}>
                           <Center>
