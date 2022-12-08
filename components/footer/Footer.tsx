@@ -20,7 +20,7 @@ const Footer = () => {
     label: string
     href: string
   }) => {
-    const colorMode = useColorModeValue('green.100', 'whiteAlpha.100')
+    const colorMode = useColorModeValue('white', 'whiteAlpha.100')
     const hover = useColorModeValue('whiteAlpha.80', 'gray.100')
     return (
       <chakra.button
@@ -50,7 +50,7 @@ const Footer = () => {
         borderTopWidth={1}
         borderStyle={'solid'}
         borderColor={'gray.700'}
-        bg={useColorModeValue('green.100', 'whiteAlpha.100')}
+        bg={useColorModeValue('orange.400', 'whiteAlpha.100')}
       >
         <Container
           as={Stack}
