@@ -1,13 +1,13 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 
-const Lyrics = () => {
+const Blog = () => {
   return (
     <>
       <NavBar />
-      <div>Lyrics</div>
+      <div>Blog</div>
     </>
   )
 }
 
-export default Lyrics
+export default Blog

@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   Button,
   Container,
@@ -28,20 +29,25 @@ export default function Home() {
             spacing={{ base: 8, md: 10 }}
             py={{ base: 20, md: 28 }}
           >
+            <Avatar
+              size={'md'}
+              src={
+                'https://www.creativefabrica.com/wp-content/uploads/2020/08/06/Music-Logo-Graphics-4868281-1-580x386.jpg'
+              }
+            />
             <Heading
               fontWeight={600}
               fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
               lineHeight={'110%'}
             >
-              Meeting scheduling{' '}
+              Let the{' '}
               <Text as={'span'} color={'orange.400'}>
-                made easy
+                Music Speak!
               </Text>
             </Heading>
             <Text color={'gray.500'} maxW={'3xl'}>
-              Never miss a meeting. Never be late for one too. Keep track of
-              your meetings and receive smart reminders in appropriate times.
-              Read your smart “Daily Agenda” every morning.
+              My brain is 85% song lyrics.I listen to a wide array of music, all
+              depends on the mood I’m in at the time.
             </Text>
             <Stack spacing={6} direction={'row'}>
               <Button
@@ -51,10 +57,10 @@ export default function Home() {
                 bg={'orange.400'}
                 _hover={{ bg: 'orange.500' }}
               >
-                Get started
+                Music
               </Button>
               <Button rounded={'full'} px={6}>
-                Learn more
+                Lyrics
               </Button>
             </Stack>
             <Flex w={'full'}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import SvgComponent from '../svgs/SVG'
-import { Stack, Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
       <div>
         <NavBar />
 
-        <Text>
+        <Text color={'gray.500'} maxW={'3xl'}>
           This Website is designed for Music and lyrics.Always ready to give my
           best with
         </Text>

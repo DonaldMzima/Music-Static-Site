@@ -5,7 +5,7 @@ export const DarkMode = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <header onSubmit={DarkMode}>
-      <Button onClick={toggleColorMode}>
+      <Button onClick={toggleColorMode} w="15%" m={[1, 15]}>
         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       </Button>
     </header>
