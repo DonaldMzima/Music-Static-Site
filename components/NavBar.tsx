@@ -13,8 +13,7 @@ import {
 import React from 'react'
 
 import Link from 'next/link'
-import { Form } from './Form'
-import Footer from './footer/Footer'
+
 import { DarkMode } from './DarkMode'
 import { useRouter } from 'next/router'
 
@@ -24,9 +23,10 @@ const NavBar = () => {
 
   return (
     <>
-      <Box bg={value}>
+      <Box bg={value} pos="fixed" w="100%">
         <Flex h={16} alignItems={'center'}>
           <Avatar
+            m={[2, 3]}
             size={'md'}
             src={
               'https://www.creativefabrica.com/wp-content/uploads/2020/08/06/Music-Logo-Graphics-4868281-1-580x386.jpg'
@@ -65,7 +65,7 @@ const NavBar = () => {
                   my={5}
                   w="100%"
                 >
-                  About
+                  About us
                 </Button>
               </Link>
 
@@ -73,12 +73,12 @@ const NavBar = () => {
                 <Button
                   variant="ghost"
                   as="a"
-                  aria-label="Lyrics"
+                  aria-label="Blog"
                   my={5}
                   w="100%"
-                  onClick={() => route.push('/lyrics')}
+                  onClick={() => route.push('/blog')}
                 >
-                  Lyrics
+                  Blog
                 </Button>
               </Link>
 
@@ -90,7 +90,7 @@ const NavBar = () => {
                   my={5}
                   w="100%"
                 >
-                  Contact
+                  Contact us
                 </Button>
               </Link>
             </Stack>
