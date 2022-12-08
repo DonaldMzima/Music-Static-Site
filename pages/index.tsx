@@ -20,7 +20,9 @@ export default function Home() {
   return (
     <>
       <div>
-        <NavBar />
+        <div>
+          <NavBar />
+        </div>
 
         <Container maxW={'5xl'}>
           <Stack
@@ -30,6 +32,7 @@ export default function Home() {
             py={{ base: 20, md: 28 }}
           >
             <Avatar
+              bg={'#000000'}
               size={'md'}
               src={
                 'https://www.creativefabrica.com/wp-content/uploads/2020/08/06/Music-Logo-Graphics-4868281-1-580x386.jpg'
