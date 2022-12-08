@@ -47,7 +47,7 @@ const schema = Yup.object({
 export const Form = () => {
   const [submitting, setSubmitting] = useState(false)
   const [modal, setModal] = useState<any>(true)
-  const color = useColorModeValue('#FFFFFF', '#000000')
+  const color = useColorModeValue('#B1B9D8', '#1A2036')
 
   const Submit = (event: any) => {
     event.preventDefault()
@@ -111,6 +111,7 @@ export const Form = () => {
         <div>
           <ModelUI isOpen={isOpen} onClose={onClose} data={modal} />
         </div>
+
         <Container
           bg="#9DC4FB"
           maxW="full"
@@ -206,102 +207,107 @@ export const Form = () => {
                       </HStack>
                     </Box>
                   </WrapItem>
+
+                  <WrapItem>
+                    <Box bg={color} borderRadius="lg">
+                      <Box m={8} color="#0B0E3F">
+                        <VStack spacing={5}>
+                          <Center>
+                            {submitting && <div>Submtting Form...</div>}
+                          </Center>
+                          <form onSubmit={handleSubmit(onSubmit)}>
+                            <fieldset>
+                              <FormControl>
+                                <Box>
+                                  <Center>
+                                    <FormLabel>
+                                      <p>Name:</p>
+                                      <Input
+                                        type="text"
+                                        placeholder="name..."
+                                        {...register('name')}
+                                      />
+                                      <Text color="red">
+                                        <p>{errors.name?.message}</p>
+                                      </Text>
+                                    </FormLabel>
+                                  </Center>
+
+                                  <Center>
+                                    <FormLabel>
+                                      <p>Surname:</p>
+                                      <Input
+                                        type="text"
+                                        placeholder="surname..."
+                                        {...register('surname')}
+                                      />
+                                      <Text color="red">
+                                        <p>{errors.surname?.message}</p>
+                                      </Text>
+                                    </FormLabel>
+                                  </Center>
+
+                                  <Center>
+                                    <FormLabel>
+                                      <p>Email:</p>
+                                      <Input
+                                        type="text"
+                                        placeholder="email..."
+                                        {...register('email')}
+                                      />
+                                      <Text color="red">
+                                        <p>{errors.email?.message}</p>
+                                      </Text>
+                                    </FormLabel>
+                                  </Center>
+
+                                  <Center>
+                                    <FormLabel>
+                                      <p>Age:</p>
+                                      <Input
+                                        type="number"
+                                        placeholder="age..."
+                                        {...register('age')}
+                                      />
+                                      <Text color="red">
+                                        <p>{errors.age?.message}</p>
+                                      </Text>
+                                    </FormLabel>
+                                  </Center>
+
+                                  <Center>
+                                    <FormLabel>
+                                      <p>Password:</p>
+                                      <Input
+                                        type="text"
+                                        placeholder="password..."
+                                        {...register('password')}
+                                      />
+                                      <Text color="red">
+                                        <p>{errors.age?.message}</p>
+                                      </Text>
+                                    </FormLabel>
+                                  </Center>
+                                </Box>
+                              </FormControl>
+                            </fieldset>
+                            <div>
+                              <Center>
+                                <Button colorScheme="orange" type="submit">
+                                  Submit
+                                </Button>
+                              </Center>
+                            </div>
+                          </form>
+                        </VStack>
+                      </Box>
+                    </Box>
+                  </WrapItem>
                 </Wrap>
               </Box>
             </Box>
           </Flex>
         </Container>
-
-        <Center>
-          <Text fontSize="1xl">
-            <h1>Login</h1>
-          </Text>
-        </Center>
-        <Center>{submitting && <div>Submtting Form...</div>}</Center>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <fieldset>
-            <FormControl>
-              <Box border="1px" bg={color}>
-                <Center>
-                  <FormLabel>
-                    <p>Name:</p>
-                    <Input
-                      type="text"
-                      placeholder="name..."
-                      {...register('name')}
-                    />
-                    <Text color="red">
-                      <p>{errors.name?.message}</p>
-                    </Text>
-                  </FormLabel>
-                </Center>
-
-                <Center>
-                  <FormLabel>
-                    <p>Surname:</p>
-                    <Input
-                      type="text"
-                      placeholder="surname..."
-                      {...register('surname')}
-                    />
-                    <Text color="red">
-                      <p>{errors.surname?.message}</p>
-                    </Text>
-                  </FormLabel>
-                </Center>
-
-                <Center>
-                  <FormLabel>
-                    <p>Email:</p>
-                    <Input
-                      type="text"
-                      placeholder="email..."
-                      {...register('email')}
-                    />
-                    <Text color="red">
-                      <p>{errors.email?.message}</p>
-                    </Text>
-                  </FormLabel>
-                </Center>
-
-                <Center>
-                  <FormLabel>
-                    <p>Age:</p>
-                    <Input
-                      type="number"
-                      placeholder="age..."
-                      {...register('age')}
-                    />
-                    <Text color="red">
-                      <p>{errors.age?.message}</p>
-                    </Text>
-                  </FormLabel>
-                </Center>
-
-                <Center>
-                  <FormLabel>
-                    <p>Password:</p>
-                    <Input
-                      type="text"
-                      placeholder="password..."
-                      {...register('password')}
-                    />
-                    <Text color="red">
-                      <p>{errors.age?.message}</p>
-                    </Text>
-                  </FormLabel>
-                </Center>
-              </Box>
-            </FormControl>
-          </fieldset>
-          <div>
-            <Center>
-              <Button colorScheme="orange" type="submit">
-                Submit
-              </Button>
-            </Center>
-          </div>
-        </form>
       </div>
     </>
   )
