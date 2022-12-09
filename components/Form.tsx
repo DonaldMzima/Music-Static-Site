@@ -217,6 +217,10 @@ export const Form = () => {
                                     <FormLabel>
                                       <p>Name:</p>
                                       <Input
+                                        borderColor={useColorModeValue(
+                                          'orange.400',
+                                          'orange.4s00',
+                                        )}
                                         type="text"
                                         placeholder="name..."
                                         {...register('name')}
@@ -231,6 +235,10 @@ export const Form = () => {
                                     <FormLabel>
                                       <p>Surname:</p>
                                       <Input
+                                        borderColor={useColorModeValue(
+                                          'orange.400',
+                                          'orange.4s00',
+                                        )}
                                         type="text"
                                         placeholder="surname..."
                                         {...register('surname')}
@@ -245,6 +253,10 @@ export const Form = () => {
                                     <FormLabel>
                                       <p>Email:</p>
                                       <Input
+                                        borderColor={useColorModeValue(
+                                          'orange.400',
+                                          'orange.4s00',
+                                        )}
                                         type="text"
                                         placeholder="email..."
                                         {...register('email')}
@@ -259,6 +271,10 @@ export const Form = () => {
                                     <FormLabel>
                                       <p>Age:</p>
                                       <Input
+                                        borderColor={useColorModeValue(
+                                          'orange.400',
+                                          'orange.4s00',
+                                        )}
                                         type="number"
                                         placeholder="age..."
                                         {...register('age')}
@@ -273,8 +289,12 @@ export const Form = () => {
                                     <FormLabel>
                                       <p>Password:</p>
                                       <Input
+                                        borderColor={useColorModeValue(
+                                          'orange.400',
+                                          'orange.4s00',
+                                        )}
                                         type="text"
-                                        placeholder="password..."
+                                        placeholder="enter password..."
                                         {...register('password')}
                                       />
                                       <Text color="red">
