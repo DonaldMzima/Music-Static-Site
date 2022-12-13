@@ -124,14 +124,14 @@ const ArticleList = () => {
             innocent bystander when he was shot and killed on Nov. 1 outside a
             Houston bowling alley. He was 28.
           </Text>
+          <Text>
+            Police arrested two people in connection with the slaying of
+            renowned Migos rapper Takeoff, who was an innocent bystander when he
+            was fatally shot last month, Houston authorities said Friday.
+            Patrick Clark, 33, was arrested Thursday on a charge of murder,
+            Houston Police Chief Troy Finner said in a news conference.
+          </Text>
         </Box>
-        <Text>
-          Police arrested two people in connection with the slaying of renowned
-          Migos rapper Takeoff, who was an innocent bystander when he was
-          fatally shot last month, Houston authorities said Friday. Patrick
-          Clark, 33, was arrested Thursday on a charge of murder, Houston Police
-          Chief Troy Finner said in a news conference.
-        </Text>
       </Box>
     </Container>
   )

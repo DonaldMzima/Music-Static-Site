@@ -57,14 +57,13 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Link href={''}>
+              <Link href="/about">
                 <Button
                   variant="ghost"
                   as="a"
-                  aria-label="about"
+                  aria-label="About"
                   my={5}
                   w="100%"
-                  onClick={() => route.push('/about')}
                 >
                   About us
                 </Button>
@@ -83,14 +82,13 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Link href={''}>
+              <Link href="/contact">
                 <Button
                   variant="ghost"
                   as="a"
                   aria-label="Contact"
                   my={5}
                   w="100%"
-                  onClick={() => route.push('/contact')}
                 >
                   Contact us
                 </Button>
