@@ -55,9 +55,11 @@ const LandingPage = () => {
                   Music
                 </Button>
               </Link>
-              <Button rounded={'full'} px={6}>
-                Lyrics
-              </Button>
+              <Link href="/lyrics">
+                <Button rounded={'full'} px={6}>
+                  Lyrics
+                </Button>
+              </Link>
             </Stack>
             <Flex w={'full'}>
               <SvgComponent
