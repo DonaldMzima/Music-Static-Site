@@ -1,16 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Button, Container, Link, Text } from '@chakra-ui/react'
+import { Button, Container, effect, Link, Text } from '@chakra-ui/react'
 
 const Music = () => {
   const CLIENT_ID = 'b2799869d1f4430a8cc10468dc678b58'
   const REDIRECT_URI = 'http://localhost:3000'
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize'
   const RESPONSE_TYPE = 'token'
+
+  const [token, setToken] = useState('')
+  const [search, setSearch] = useState('')
+
+  useEffect(() => {
+    const hash = window.location.hash
+    let token = window.localStorage.getItem('token')
+
+    if (!token && hash) {
+      hash
+        .substring(1)
+        .split('&')
+        .find((elem) => elem.startsWith('access_token'))
+        ?.split('=')[1]
+    }
+
+    console.log(token)
+  })
   return (
     <>
       <Container maxW="full" mt={0} centerContent overflow="hidden">
-        <Text>Sportify Account</Text>
+        <Text fontSize="6xl" as="em">
+          Sportify Account
+        </Text>
         <Button
           size="md"
           height="48px"
