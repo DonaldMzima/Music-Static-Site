@@ -121,7 +121,7 @@ export const Form = () => {
               m={{ sm: 4, md: 16, lg: 10 }}
               p={{ sm: 5, md: 5, lg: 16 }}
             >
-              <Box p={4}>
+              <Box p={6}>
                 <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                   <WrapItem>
                     <Box>
@@ -132,7 +132,7 @@ export const Form = () => {
                       <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                         <VStack pl={0} spacing={3} alignItems="flex-start">
                           <Button
-                            size="md"
+                            size="sm"
                             height="48px"
                             width="200px"
                             variant="ghost"
@@ -143,7 +143,7 @@ export const Form = () => {
                             +27-789941731
                           </Button>
                           <Button
-                            size="md"
+                            size="sm"
                             height="48px"
                             width="200px"
                             variant="ghost"
@@ -154,7 +154,7 @@ export const Form = () => {
                             donaldmzima8@gmail.com
                           </Button>
                           <Button
-                            size="md"
+                            size="sm"
                             height="48px"
                             width="200px"
                             variant="ghost"
@@ -164,7 +164,7 @@ export const Form = () => {
                               <MdLocationOn color="#1970F1" size="20px" />
                             }
                           >
-                            Vanderbijlpark, South Africa
+                            Vanderbijlpark,South Africa
                           </Button>
                         </VStack>
                       </Box>
@@ -279,6 +279,7 @@ export const Form = () => {
                                         placeholder="age..."
                                         {...register('age')}
                                       />
+
                                       <Text color="red">
                                         <p>{errors.age?.message}</p>
                                       </Text>
