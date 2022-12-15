@@ -44,7 +44,7 @@ const schema = Yup.object({
   password: Yup.string().min(6).max(10).required('password required'),
 })
 
-export const ContactForm = () => {
+export const Form = () => {
   const [submitting, setSubmitting] = useState(false)
   const [modal, setModal] = useState<any>(true)
   const color = useColorModeValue('orange.400', '#1A2036')
