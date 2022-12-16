@@ -12,7 +12,7 @@ const lyrics = () => {
     <>
       <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Text fontSize="6xl" as="em">
-          Sportify Account
+          Lyrics Account
         </Text>
         <Button
           size="md"
