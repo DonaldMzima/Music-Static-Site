@@ -1,5 +1,6 @@
 import { Stack } from '@chakra-ui/react'
 import React from 'react'
+
 import Footer from '../components/footer/Footer'
 import { Form } from '../components/Form'
 import NavBar from '../components/NavBar'
