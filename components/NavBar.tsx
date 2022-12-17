@@ -23,7 +23,12 @@ const NavBar = () => {
 
   return (
     <>
-      <Box bg={value} pos="fixed" w="100%">
+      <Box
+        bg={value}
+        pos="fixed"
+        width="100%"
+        fontSize={['sm', 'md', 'lg', 'xl']}
+      >
         <Flex h={16} alignItems={'center'}>
           <Avatar
             m={[2, 3]}
