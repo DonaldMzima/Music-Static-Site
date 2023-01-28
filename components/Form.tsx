@@ -100,7 +100,7 @@ export const Form = () => {
   const onSubmit = (data: any) => {
     onOpen()
     setModal(data)
-    console.log(data)
+    console.log("check this daaataa",data)
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
