@@ -10,16 +10,19 @@ import {
 } from '@chakra-ui/react'
 
 import SvgComponent from '../svgs/SVG'
+import NavBar from './NavBar'
+import Footer from './footer/Footer'
 
 const LandingPage = () => {
   return (
     <>
       <div>
+        <NavBar />
         <Container maxW={'5xl'}>
           <Stack
             textAlign={'center'}
             align={'center'}
-            spacing={{ base: 8, md: 10 }}
+            spacing={{ base: 1, md: 10 }}
             py={{ base: 20, md: 28 }}
           >
             <Avatar
@@ -69,6 +72,7 @@ const LandingPage = () => {
             </Flex>
           </Stack>
         </Container>
+        <Footer />
       </div>
     </>
   )
