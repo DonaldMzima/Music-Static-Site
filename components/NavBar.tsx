@@ -74,22 +74,6 @@ const Navbar = () => {
           </Button>
         </Link>
 
-
-              <Link href={''}>
-                <Button
-                  variant="ghost"
-                  as="a"
-                  aria-label="Contact"
-                  my={5}
-                  w="100%"
-                  onClick={() => route.push('/contact')}
-                >
-                  Contact us
-                </Button>
-              </Link>
-            </Stack>
-          </Container>
-
         <Link>
           <Button
             variant="ghost"
@@ -103,8 +87,11 @@ const Navbar = () => {
           </Button>
         </Link>
 
-
-       
+        <Link href="/contact">
+          <Button variant="ghost" as="a" aria-label="Contact" my={5} w="100%">
+            Contact us
+          </Button>
+        </Link>
       </Flex>
       <Box>
         <DarkMode />
