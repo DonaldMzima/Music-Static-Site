@@ -87,13 +87,14 @@ const NavBar = () => {
                 </Button>
               </Link>
 
-              <Link href="/contact">
+              <Link href={''}>
                 <Button
                   variant="ghost"
                   as="a"
                   aria-label="Contact"
                   my={5}
                   w="100%"
+                  onClick={() => route.push('/contact')}
                 >
                   Contact us
                 </Button>
