@@ -71,13 +71,20 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href="/about">
-            <Button variant="ghost" as="a" aria-label="About" my={5} w="100%">
+          <Link>
+            <Button
+              variant="ghost"
+              as="a"
+              aria-label="About"
+              my={5}
+              w="100%"
+              onClick={() => route.push('/about')}
+            >
               About us
             </Button>
           </Link>
 
-          <Link href={''}>
+          <Link>
             <Button
               variant="ghost"
               as="a"
