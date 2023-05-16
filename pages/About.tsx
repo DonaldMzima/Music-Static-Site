@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import SvgComponent from '../svgs/SVG'
 import { Stack, Text } from '@chakra-ui/react'
+import Footer from '../components/footer/Footer'
 
 const About = () => {
   return (
@@ -22,6 +23,7 @@ const About = () => {
           </Text>
         </Stack>
         <SvgComponent />
+        <Footer />
       </div>
     </>
   )

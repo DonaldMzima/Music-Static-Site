@@ -30,7 +30,7 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md'
-import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs'
 
 import { useState } from 'react'
 import ModelUI from './Model'
@@ -40,7 +40,7 @@ const schema = Yup.object({
   name: Yup.string().required('enter your name'),
   surname: Yup.string().required('enter your surame'),
   email: Yup.string().email().required('email required'),
-  age: Yup.number().positive().integer().min(15).required('enter your age'),
+  age: Yup.number().positive().integer().min(16).required('enter your age'),
   password: Yup.string().min(6).max(10).required('password required'),
 })
 
@@ -57,7 +57,6 @@ export const Form = () => {
       .sendForm(
         'service_9l68yag',
         'template_bmfoy27',
-
         event.target,
         'wcEzEMeePpQMJBII6',
       )
@@ -100,7 +99,7 @@ export const Form = () => {
   const onSubmit = (data: any) => {
     onOpen()
     setModal(data)
-    console.log(data)
+    console.log('check this daaataa', data)
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -182,22 +181,27 @@ export const Form = () => {
                           _hover={{ bg: '#0D74FF' }}
                           icon={<MdFacebook size="28px" />}
                         />
-                        <IconButton
-                          aria-label="github"
-                          variant="ghost"
-                          size="lg"
-                          isRound={true}
-                          _hover={{ bg: '#0D74FF' }}
-                          icon={<BsGithub size="28px" />}
-                        />
-                        <IconButton
-                          aria-label="discord"
-                          variant="ghost"
-                          size="lg"
-                          isRound={true}
-                          _hover={{ bg: '#0D74FF' }}
-                          icon={<BsDiscord size="28px" />}
-                        />
+                        <a href="https://github.com/DonaldMzima">
+                          <IconButton
+                            aria-label="github"
+                            variant="ghost"
+                            size="lg"
+                            isRound={true}
+                            _hover={{ bg: '#0D74FF' }}
+                            icon={<BsGithub size="28px" />}
+                          />
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/donald-mzima-8557a3231/">
+                          <IconButton
+                            aria-label="discord"
+                            variant="ghost"
+                            size="lg"
+                            isRound={true}
+                            _hover={{ bg: '#0D74FF' }}
+                            icon={<BsLinkedin size="28px" />}
+                          />
+                        </a>
                       </HStack>
                     </Box>
                   </WrapItem>

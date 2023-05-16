@@ -2,6 +2,7 @@ import { Stack } from '@chakra-ui/react'
 import React from 'react'
 import ArticleList from '../components/BlogSection'
 import NavBar from '../components/NavBar'
+import Footer from '../components/footer/Footer'
 
 const Blog = () => {
   return (
@@ -17,6 +18,7 @@ const Blog = () => {
           <ArticleList />
         </div>
       </Stack>
+      <Footer />
     </>
   )
 }
