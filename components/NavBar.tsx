@@ -94,7 +94,7 @@ const NavBar = () => {
                   aria-label="Contact"
                   my={5}
                   w="100%"
-                  onClick={() => route.push('/contact')}
+                  onClick={() => route.push('/contacts')}
                 >
                   Contact us
                 </Button>
