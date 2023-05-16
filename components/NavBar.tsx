@@ -102,9 +102,6 @@ const Navbar = () => {
             Blog
           </Button>
         </Link>
-
-
-       
       </Flex>
       <Box>
         <DarkMode />
